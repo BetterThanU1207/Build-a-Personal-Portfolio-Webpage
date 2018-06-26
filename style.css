@@ -1,0 +1,129 @@
+html{
+    overflow-x: hidden;
+}
+body{
+    margin: 0 auto;
+    width: 100%;
+}
+h1{
+    text-align: left;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    padding: 0 250px;/*实现文字偏移*/
+    position: absolute;
+    top: 0px;left: 0px;
+    background-color: #1E90FF;
+    z-index: 2;
+}
+/* 横向导航*/
+.nav-across{
+    text-align: left;
+    width: 80%;
+    min-width: 500px;
+    /* text-decoration: none; */
+    position: absolute;
+    top: 15px;left: 500px;
+    z-index: 2;
+}
+/* 设置所有ul格式 */
+.nav-across ul{
+    /* text-align: center; */
+    list-style: none;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #efefef, #bbbbbb);
+    padding: 0px 10px;    
+    /* overflow: hidden;加上之后弹出的菜单会被隐藏 */
+    position: relative;
+    box-shadow: 1px 1px 1px #666;
+    display: inline-table;/*规定元素应该生成的框的类型*/
+}
+/* 只设置一级导航浮动（横向），浮动会致使父级容器坍塌，长宽高发生变化 */
+.ul-across>li{
+    float: left;
+}
+/* 清除浮动影响 */
+.ul-across:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+.ul-across ul{
+    display: none;
+}
+.nav-across a{
+    text-decoration: none;
+}
+/* 设置所有a */
+.ul-across li a{
+    display: block;
+    padding: 15px 20px;
+    /* color: white; */
+}
+/* 为一级以下菜单加横线 
+.ul-product li{
+    float: none;
+    border-top: 1px solid #6b727c;
+    border-bottom: 1px solid #575f6a;
+}*/
+/* 一级一下菜单去圆角 */
+.li-product ul{
+    border-radius: 0px;
+}
+/* 一级一下菜单缩小长宽 */
+.ul-product li a{
+    padding: 5px;
+}
+/* 给所有的菜单变换背景 */
+.ul-across li:hover{
+    background: linear-gradient(to bottom,#4f5964,#5f6975);
+}
+/* 二级菜单 */
+.li-product:hover .ul-product{
+    display: block;
+    position: absolute;
+    top: 100%;
+    z-index: 3;
+}
+/* 三级菜单 */
+.li-yqyb:hover .ul-yqyb{
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 90%;
+    top: 0%;
+    z-index: 5;
+}
+.li-ctsb:hover .ul-ctsb{
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 90%;
+    top: 50%;
+    z-index: 5;
+}
+.leftnav{
+    position: absolute;
+    top: 120px;left: 0;
+    margin-left: 0px;
+    overflow: auto;
+    width: 20%;
+    height: 80%;
+}
+.right-text{
+    margin-left: 100px;
+    position: absolute;
+    top: 120px;
+    overflow: auto;
+    width: 70%;
+    height: 80%;
+}
+.contact{
+    margin-left: 100px;
+    position: absolute;
+    top: 95%;  
+}
+.weiboImg{
+    width: 30px;
+    height: 30px;
+}
